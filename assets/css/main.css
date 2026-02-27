@@ -2152,7 +2152,6 @@ input, select, textarea {
 			width: 20em;
 			height: 20em;
 			margin: 0;
-			box-shadow: 0 0 20px rgba(0,0,0,0.5);
 			animation: float 6s ease-in-out infinite;
 		}
 
