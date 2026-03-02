@@ -31,4 +31,19 @@
 			offset: function() { return $nav.height(); }
 		});
 
+	// Fade in elements on scroll.
+		var $fadeElements = $(".fade-in-up");
+
+		$window.on("scroll load", function() {
+			var bottom_of_window = $window.scrollTop() + $window.height();
+
+			$fadeElements.each(function() {
+				var bottom_of_object = $(this).offset().top + ($(this).outerHeight() / 4);
+
+				if (bottom_of_window > bottom_of_object) {
+					$(this).addClass("visible");
+				}
+			});
+		});
+
 })(jQuery);
